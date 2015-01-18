@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="PassAllProxy" transports="http https" startOnLoad="true" trace="disable">
+    <target>
+        <inSequence>
+            <filter source="get-property('To')" regex="default_regex">
+                <then/>
+                <else/>
+            </filter>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>
